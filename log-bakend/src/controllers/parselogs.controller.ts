@@ -9,9 +9,7 @@ const parseLog = async (req: Request, res: Response) => {
     try {
         let logsBufferString = String((req as MulterRequest).file.buffer);
         let requiredLogs = processLogStrings(logsBufferString);
-        setTimeout(() => {
-            res.send(requiredLogs);
-        }, 5000);
+        res.send(requiredLogs);
     } catch (error) {
         console.log(error)
         res.statusCode = 500;

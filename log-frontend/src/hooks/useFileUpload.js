@@ -14,7 +14,7 @@ import { saveAs } from "file-saver";
       try {
         const response = await axios({
           method: "post",
-          url: "http://localhost:4001/upload",
+          url: "http://localhost:4001/parselogs",
           data: formData,
           headers: { "Content-Type": "multipart/form-data" },
         });
